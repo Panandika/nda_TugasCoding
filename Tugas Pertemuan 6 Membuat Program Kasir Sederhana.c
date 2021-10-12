@@ -3,8 +3,7 @@
 // Developer    : Ananda Pannadhika Putra (2105551083)
 
 #include <stdio.h>
-#include<stdlib.h>
-#include<string.h>
+//#include<string.h>										//Jika menggunakan fungsi strcpy()
 
 
 int main(){
@@ -16,24 +15,57 @@ int main(){
     printf("Masukkan kode barang  ");
     scanf("%d", &kode_barang);
 
-    switch (kode_barang){
+    switch (kode_barang){									
         case 312:
-            strcpy(nama_barang,"Aqua");
-            harga_barang = 4000;
+            //strcpy(nama_barang,"Aqua");					//Dengan menggunakan fungsi strcpy()
+		nama_barang[0] = 'A';
+		nama_barang[1] = 'q';			
+		nama_barang[2] = 'u';		
+    		nama_barang[3] = 'a';  
+    		nama_barang[4] = '\0';  
+	  
+	        harga_barang = 4000;
 
             break;
 
         case 124:
-         	strcpy(nama_barang,"Freshtea");
+         	//strcpy(nama_barang,"Freshtea");				//Dengan menggunakan fungsi strcpy()
+			nama_barang[0] = 'F';
+			nama_barang[1] = 'r';			
+			nama_barang[2] = 'e';		
+    		nama_barang[3] = 's';  
+ 			nama_barang[4] = 'h';
+			nama_barang[5] = 't';			
+			nama_barang[6] = 'e';		
+    		nama_barang[7] = 'a'; 
+    		nama_barang[8] = '\0'; 
+    		
             harga_barang = 6000;
 
             break;
         case 211:
-            strcpy(nama_barang,"Teh Botol");
+            //strcpy(nama_barang,"Teh Botol");				//Dengan menggunakan fungsi strcpy()
+            nama_barang[0] = 'T';
+		nama_barang[1] = 'e';			
+		nama_barang[2] = 'h';		
+    		nama_barang[3] = ' ';  
+ 		nama_barang[4] = 'B';
+		nama_barang[5] = 'o';			
+		nama_barang[6] = 't';		
+    		nama_barang[7] = 'o'; 
+    		nama_barang[8] = 'l';
+		nama_barang[9] = '\0';
+			
             harga_barang = 3000;
-
-            break;
+			
+		break;
+        
+		default:
+		printf("Mohon maaf kode yang anda masukkan tidak sesuai!");
+        	
     }
+
+
 
     printf("Masukkan jumlah barang  ");
     scanf("%d", &jumlah_barang);
